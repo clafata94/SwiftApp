@@ -22,28 +22,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PN-Q5-e9K">
-                                <rect key="frame" x="143" y="90" width="89" height="21"/>
+                                <rect key="frame" x="143" y="50" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-Rm-Ac3">
-                                <rect key="frame" x="154" y="161" width="67" height="30"/>
+                                <rect key="frame" x="154" y="121" width="67" height="30"/>
                                 <state key="normal" title="PUSH ME"/>
                                 <connections>
                                     <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2X-zh-7VM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMv-xH-MvR">
+                                <rect key="frame" x="137.5" y="201" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kGW-SW-Ffa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-Wx-qqx">
+                                <rect key="frame" x="137.5" y="241" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zd3-zn-jqC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vMv-xH-MvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ah-vo-GXI"/>
                             <constraint firstItem="sul-Rm-Ac3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="40D-fO-YSf"/>
+                            <constraint firstItem="vMv-xH-MvR" firstAttribute="top" secondItem="sul-Rm-Ac3" secondAttribute="bottom" constant="50" id="48C-tq-zJf"/>
+                            <constraint firstItem="Hn2-Wx-qqx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MzG-7l-xrY"/>
                             <constraint firstItem="0PN-Q5-e9K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a3G-ab-O0W"/>
-                            <constraint firstItem="0PN-Q5-e9K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="eVT-hF-nwl"/>
+                            <constraint firstItem="0PN-Q5-e9K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="eVT-hF-nwl"/>
+                            <constraint firstItem="Hn2-Wx-qqx" firstAttribute="top" secondItem="vMv-xH-MvR" secondAttribute="bottom" constant="10" id="moz-Y0-KXg"/>
                             <constraint firstItem="sul-Rm-Ac3" firstAttribute="top" secondItem="0PN-Q5-e9K" secondAttribute="bottom" constant="50" id="rqf-8b-j88"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="vMv-xH-MvR" id="FeT-eF-v7j"/>
+                        <outlet property="text2" destination="Hn2-Wx-qqx" id="6QA-cS-QGf"/>
                         <outlet property="theLabel" destination="0PN-Q5-e9K" id="BKH-XW-Jnz"/>
                     </connections>
                 </viewController>
