@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPress(_ sender: Any) {
         
-        
+        theLabel.text = " Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
         
     }
     
